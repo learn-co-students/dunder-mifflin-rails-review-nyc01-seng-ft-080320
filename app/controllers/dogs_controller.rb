@@ -2,7 +2,7 @@ class DogsController < ApplicationController
   before_action :find_dog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @dog = Dog.all
+    @dogs = Dog.all
   end
 
   def show
@@ -36,7 +36,7 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :age)
+    params.require(:dog).permit(:id, :name, :breed, :age)
   end
 
   def find_dog
