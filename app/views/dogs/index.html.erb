@@ -1,0 +1,7 @@
+<h1>Dog Index</h1>
+
+    <div>
+        <% @dogs.each do |dog| %>
+        <%= link_to dog.name, dog_path(dog) %>
+        <% end%>
+    </div>
