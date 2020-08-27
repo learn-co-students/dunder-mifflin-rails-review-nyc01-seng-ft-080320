@@ -1,0 +1,10 @@
+<h1>List of All Dogs:</h1>
+<% if request.original_fullpath == "/dogs/order/asc" %>
+    <%=link_to "Order by total owners", order_path("desc")%>
+<% else %>
+    <%=link_to "Order by total owners", order_path("asc")%>
+<% end %>
+
+<% @dogs.each do |dog| %>
+    <h2><%= link_to dog.name, dog_path(dog) %></h2>
+<% end %>

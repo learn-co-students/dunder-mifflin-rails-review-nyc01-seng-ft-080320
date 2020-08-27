@@ -1,0 +1,11 @@
+<h1>Dog Details:</h1>
+
+<div>
+    <h2><%= @dog.name %></h2>
+    <h4>Breed: <%= @dog.breed %></h4>
+    <h4>Age: <%= @dog.age %></h4>
+    <h4>Employees: <% @dog.employees.each do |employee| %></h4>
+        <h5><%= link_to employee.full_name, employee_path(employee) %></h5>
+        <% end %>
+    <%= button_to "Back to index", dogs_path %>
+</div>
