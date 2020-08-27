@@ -21,21 +21,7 @@ class EmployeesController < ApplicationController
 
     def update
         @employee.update(employee_params)
-        # if @employee.update(employee_params)
-        # else
-        #     puts "The title or alias has already been selected. Please try again."
-        #     redirect_to edit_employee_path(@employee)
-        # end
-        # Employee.all.each do |employee|
-        #     if employee.title != @employee.title
-        #         @employee.title
-        #     elsif employee.alias != @employee.alias
-        #         @employee.alias
-        #     else 
-        #     puts "The title or alias has already been selected. Please try again."   
-        #     end
-        # end 
-       redirect_to edit_employee_path(@employee)
+       redirect_to employee_path(@employee)
     end
 
 
@@ -51,3 +37,19 @@ class EmployeesController < ApplicationController
     end
 
 end
+
+
+     # if @employee.update(employee_params)
+        # else
+        #     puts "The title or alias has already been selected. Please try again."
+        #     redirect_to edit_employee_path(@employee)
+        # end
+        # Employee.all.each do |employee|
+        #     if employee.title != @employee.title
+        #         @employee.title
+        #     elsif employee.alias != @employee.alias
+        #         @employee.alias
+        #     else 
+        #     puts "The title or alias has already been selected. Please try again."   
+        #     end
+        # end 
