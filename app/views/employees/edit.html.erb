@@ -1,0 +1,40 @@
+<h1>New Employee Form: </h1>
+
+<%= form_for @employee do |f| %>
+<table>
+    <tr>
+        <td><%= f.label :first_name %></td>
+        <td>: <%= f.text_field :first_name %></td>
+    </tr>
+    <tr>
+        <td><%= f.label :last_name %></td>
+        <td>: <%= f.text_field :last_name %></td>
+    </tr>
+    <tr>
+        <td><%= f.label :alias %></td>
+        <td>: <%= f.text_field :alias %></td>
+    </tr>
+    <tr>
+        <td><%= f.label :title %></td>
+        <td>: <%= f.text_field :title%></td>
+    </tr>
+    <tr>
+        <td><%= f.label :office %></td>
+        <td>: <%= f.text_field :office%></td>
+    </tr>
+    <tr>
+        <td><%= f.label :img_url %></td>
+        <td>: <%= f.text_field :img_url%></td>
+    </tr>
+    <tr>
+        <td><%= f.label :dog %></td>
+        <td>: <%= f.collection_select :dog_id, Dog.all, :id, :name %></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>  <%= f.submit %></td>
+        
+        <!-- <td> <button type= "cancel" formaction="/employees">Cancel</button></td> -->
+    </tr>
+</table>
+<% end %>
