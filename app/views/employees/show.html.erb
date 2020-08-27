@@ -1,0 +1,27 @@
+<h1>Employee Page</h1>
+
+First name:<br>
+<h3><%=@employee.first_name%></h3><br>
+
+Last name:<br>
+<h3><%=@employee.last_name%></h3><br>
+
+Alias: <br>
+<h3><%=@employee.alias%></h3><br>
+
+Title:<br>
+<h3><%=@employee.title%></h3>
+
+Office: <br>
+<h3><%=@employee.office%></h3><br>
+
+Photo here:<br>
+<img src="<%= @employee.img_url %>" alt="<% @employee.img_url%>" class="show-img">
+<br>
+
+Dog:<br>
+<h3><%= link_to(@employee.dog.name, dog_path(@employee.dog)) %></h3><br>
+
+
+<h3>Edit Employee</h3>
+<%= link_to("Edit Employee", edit_employee_path(@employee)) %>

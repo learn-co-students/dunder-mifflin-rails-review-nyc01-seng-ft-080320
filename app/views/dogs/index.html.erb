@@ -1,0 +1,7 @@
+<h1>Dogs Index Page</h1>
+
+<% @dogs.each do |dog|  %>
+<%= link_to dog.name, dog_path(dog)%>: <%= dog.employees.count%><br>
+<% end %>
+<br>
+<%= button_to("Sort by Owner Count", dogs_path) %>
