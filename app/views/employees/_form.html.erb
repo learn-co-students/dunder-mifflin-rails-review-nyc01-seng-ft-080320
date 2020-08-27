@@ -1,0 +1,19 @@
+<%= form_for @employee do |f| %>
+    <p> <%= f.label :first_name %> </p>
+   <p> <%= f.text_field :first_name%> </p> 
+
+   <p> <%= f.label :last_name %> </p>
+   <p> <%= f.text_field :last_name %> </p> 
+       
+   <p> <%= f.label :alias %> </p>
+   <p> <%= f.text_field :alias %> </p>
+      
+   <p> <%= f.label :title %> </p>
+   <p> <%= f.text_field :title %> </p>
+   <p> <%= f.label :office %> </p>
+   <p> <%= f.text_field :office %> </p>
+   <p> <%= f.label :dog %> </p>
+   <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+   <%=  f.submit %>
+
+   <% end %>
