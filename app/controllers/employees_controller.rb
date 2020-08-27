@@ -7,16 +7,27 @@ class EmployeesController < ApplicationController
     end 
 
     def new
-
-    end 
+        @employee = Employee.new
+    end
 
     def create
+        @employee = Employee.create(employee_params)
+        redirect_to employee_path(@employee)
     end 
 
     def edit
+        @employee = Employee.find(params[:id])
     end 
 
     def update
+        @employee = Employee.update(employee_params)
+        redirect_to employee_path(@employee)
+    end 
+
+    private
+
+    def employee_params
+        params.require(:employee).permit!
     end 
 
 end

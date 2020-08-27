@@ -4,3 +4,5 @@
 <h4>Title: <%= @employee.title %></h4>
 <h4>Office: <%= @employee.office %></h4>
 <h4>Dog: <%= @employee.dog.name %></h4>
+
+<p><%= link_to "Edit Employee Profile", edit_employee_path(@employee) %></p>
