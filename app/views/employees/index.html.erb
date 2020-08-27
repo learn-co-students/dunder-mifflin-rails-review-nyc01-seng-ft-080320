@@ -1,0 +1,8 @@
+<h1>Employee Index Page</h1>
+
+List of Employees<br><br>
+
+<% @employees.each do |e| %>
+    <%= link_to(e.to_s, employee_path(e)) %><br>
+<% end %>
+

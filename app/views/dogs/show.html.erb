@@ -1,0 +1,19 @@
+<h1>Individual Dog Show Page</h1>
+
+Name:
+<h1><%= @dog.name %></h1>
+
+Breed:
+<h1><%= @dog.breed %></h1>
+
+Age:
+<h1><%= @dog.age %></h1>
+
+List of Owners:<br>
+<% @dog.employees.each do |emp| %>
+    <%= link_to(emp.first_name, employee_path(emp)) %><br>
+<% end %>
+
+
+
+
