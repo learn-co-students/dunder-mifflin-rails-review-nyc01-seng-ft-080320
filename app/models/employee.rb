@@ -1,6 +1,6 @@
 class Employee < ApplicationRecord
-  belongs_to :dog
+    belongs_to :dog
 
-  validates_uniqueness_of :alias
-  validates_uniqueness_of :title
+    validates :alias, uniqueness: true
+    validates :title, uniqueness: true
 end
